@@ -1,2 +1,2 @@
 print("hello from module1.py")
-print(f"__name__=")
+print(f"{__name__=}")
