@@ -160,7 +160,7 @@ class Rectangle(Shape):
     def height(self,value: float|int):
         """height setter. This raises any errors that could be entered """
         if isinstance(value, str): # makes sure that imputed value is not a string
-            raise TypeError(f"y position must be a float or int value, not {type(value)}") # making sure that a float or int will be entered
+            raise TypeError(f"height must be a float or int value, not {type(value)}") # making sure that a float or int will be entered
         if (value < 0):
             raise ValueError("height must be a positive number, not a negative") # raises an error if a negative number is entered
         self._height = value
@@ -174,7 +174,7 @@ class Rectangle(Shape):
     def length(self,value: float|int):
         """length setter for issuing custom error handling"""
         if isinstance(value, str): # makes sure that imputed value is not a string
-            raise TypeError(f"y position must be a float or int value, not {type(value)}")
+            raise TypeError(f"length position must be a float or int value, not {type(value)}")
         if (value < 0):
             raise ValueError("length must be a positive number, not a negative") # raises an error if a negative number is entered
         self._length = value
@@ -197,9 +197,9 @@ class Rectangle(Shape):
         """method to check if a rectangle is a square
         - a square has equal sides"""
         if self._length == self._height: # if length and height are the same then it is classed as a square
-           return print("This is a square ")
-        else:
-            return print("This is not a square")
+           return "This is a square"
+        
+        return "This is not a square"
 
     def is_inside(self, x_pos, y_pos):
         """method to define if newly entered coordinates are within the defined rectangle"""
