@@ -67,10 +67,14 @@ class Shape:
     
     
     def translate(self,x_other:int|float, y_other:int|float) -> int|float: 
-         """ Moves the x and y position to another point """
-         self.x_pos += x_other  # adds the amount entered to the position to adjust the original position
-         self.y_pos += y_other
-
+        """ Moves the x and y position to another point """
+        if not isinstance (x_other, (int, float)): # raises a Valueerror if one value is entered as a string
+            raise ValueError("translate entries must be a float or a int value")
+        if not isinstance (y_other, (int, float)): # raises a Valueerror if one value is entered as a string
+            raise ValueError("translate entries must be a float or a int value")
+        self.x_pos += x_other  # adds the amount entered to the position to adjust the original position
+        self.y_pos += y_other
+        
 
 class Circle(Shape):
     """This is a Circle class. It contains functions and methods that are only relevant to a circle"""
