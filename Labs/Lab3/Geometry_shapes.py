@@ -45,25 +45,25 @@ class Shape:
         """operator overload to compare if shape area is < to another shape area"""
         if type(self) == type(other):
             return self.area < other.area
-        return False
+        raise TypeError("Can't compare different shapes")
 
     def __gt__(self, other) -> bool:
         """operator overload to compare if shape area is > to another shape area"""
         if type(self) == type(other):
             return self.area > other.area
-        return False
+        raise TypeError("Can't compare different shapes")
         
     def __le__(self, other) -> bool:
         """operator overload to compare if shape area is <= to another shape """
         if type(self) == type(other):
             return self.area <= other.area
-        return False
+        raise TypeError("Can't compare different shapes")
 
     def __ge__(self, other) -> bool:
         """operator overload to compare if shape area is >= to another shape"""
         if type(self) == type(other):
             return self.area >= other.area
-        return False
+        raise TypeError("Can't compare different shapes")
     
     
     def translate(self,x_other:int|float, y_other:int|float) -> int|float: 
