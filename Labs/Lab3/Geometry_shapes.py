@@ -201,7 +201,7 @@ class Rectangle(Shape):
         
         return "This is not a square"
 
-    def is_inside(self, x_pos, y_pos):
+    def is_inside(self, x_pos, y_pos) -> bool:
         """method to define if newly entered coordinates are within the defined rectangle"""
         x_min = self.x_pos - (self.length / 2) 
         x_max = self.x_pos + (self.length / 2)
