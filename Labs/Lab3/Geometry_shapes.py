@@ -1,5 +1,5 @@
-from __future__ import annotations
-import math
+from __future__ import annotations # for hinting tex float|int
+import math #imports math functions tex pi and square root
 
 class Shape:
     """This is a shape class that contains elements and methods that are similar in different
@@ -124,7 +124,7 @@ class Circle(Shape):
            return "This is a Unit circle" # will return true if radius is == 1. Then it will print the message
         return "This is not a Unit circle"
 
-    def is_inside(self, x_test, y_test,):
+    def is_inside(self, x_test, y_test,) -> bool:
         """ method to check when two x and y points are entered, if they are within the circles that has been defined
         - The method here shows that if the points entered are on the boundary of the circle, that means it is not within the circle. """
         distance = math.sqrt((self.x_pos - x_test)**2 + (self.y_pos - y_test)**2) # using the euclidean distance equation.
@@ -183,12 +183,12 @@ class Rectangle(Shape):
 
 
     @property
-    def area(self) -> float:
+    def area(self) -> float|int:
         """rectangle area property"""
         return self.height * self.length
 
     @property
-    def circumference(self) -> float:
+    def circumference(self) -> float|int:
         """rectangle circumference property"""
         return (self.length *2) + (self.height * 2)
 
